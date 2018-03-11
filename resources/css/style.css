@@ -217,6 +217,7 @@ header {
     height: 100px;
     float: left;
     margin-top: 20px;
+    border-radius: 5%;
 }
 
 .logo-black {
