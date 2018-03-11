@@ -12,8 +12,8 @@ $(document).ready(function() {
     });
     
     // scroll to plans
-    $('.js--scroll-to-plans').click(function() {
-        $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
+    $('.js--scroll-to-portfolio').click(function() {
+        $('html, body').animate({scrollTop: $('.js--section-portfolio').offset().top - 100}, 1000);
     });
     
     // scroll to features

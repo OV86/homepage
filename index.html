@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healthy meals to your table.">
+    <meta name="description" content="Devstack is a web development company focused on online stores and single-page applications.">
 
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-    <title>Omnifood</title>
+    <title>Devstack</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
@@ -37,7 +37,7 @@
                         <a href="#services">What we do</a>
                     </li>
                     <li>
-                        <a href="#portfolio">Portfolio</a>
+                        <a class="js--scroll-to-portfolio" href="#">Portfolio</a>
                     </li>
                     <li>
                         <a href="#contact">Contact us</a>
@@ -49,8 +49,7 @@
             </div>
         </nav>
         <div class="hero-text-box">
-            <h1>We create web apps.
-                <br>We do it well.</h1>
+            <h1>We create websites and web apps.</h1>
             <a class="btn btn-full" href="#services">Read more</a><!-- js--scroll-to-plans -->
             <a class="btn btn-ghost" href="#contact">Get in touch</a><!--  js--scroll-to-start -->
         </div>
@@ -59,48 +58,50 @@
         <div class="row">
             <h2>What we do</h2>
             <p class="long-copy">
-                Hello, we’re Devstack, your partner in creating your next web app.
-                We focus on single-page applications, online stores, and workflow automation.
+                Hello, we’re Devstack, your partner in creating your next web project.
+                We can help you with anything from a simple static website to online stores and SPAs.
             </p>
         </div>
         <div class="row js--wp-1">
             <div class="col span-1-of-4 box">
-                <i class="ion-ios-infinite-outline icon-big"></i>
+                <i class="ion-paintbrush icon-big"></i>
                 <h3>UX and design</h3>
                 <p>
-                    We create visually attractive products with superb functionality.
-                    We work hard to make your website engaging and user-friendly.
+                    We create visually attractive websites and mobile apps with superb functionality.
+                    We work hard to make your online product engaging and user-friendly.
                 </p>
             </div>
             <div class="col span-1-of-4 box">
-                <i class="ion-ios-stopwatch-outline icon-big"></i>
+                <i class="ion-ios-list-outline icon-big"></i>
                 <h3>Single-page apps</h3>
                 <p>
-                    
-                </p>
-            </div>
-            <div class="col span-1-of-4 box">
-                <i class="ion-ios-nutrition-outline icon-big"></i>
-                <h3>Online stores</h3>
-                <p>
-                    
+                    We can create SPAs that are super-fast and offer an outstanding UX
+                     - no page reloads, no extra wait time.
                 </p>
             </div>
             <div class="col span-1-of-4 box">
                 <i class="ion-ios-cart-outline icon-big"></i>
+                <h3>Online stores</h3>
+                <p>
+                    We use Wordpress and WooCommerce to deliver a proven website for
+                    your e-commerce needs. Custom solutions are also welcome.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-loop-strong icon-big"></i>
                 <h3>Workflow automation</h3>
                 <p>
-                    
+                    We help you to automate processes that require manual data entry.
                 </p>
             </div>
         </div>
     </section>
-    <section class="section-meals" id="portfolio">
+    <section class="section-meals js--section-portfolio">
         <ul class="meals-showcase clearfix">
             <li style="padding: 5px;">
                 <figure class="meal-photo">
                     <a href="https://hekkpipe.com" target="_blank">
-                        <img src="resources/img/hekkpipe.png" alt="Hekkpipe">
+                        <img src="resources/img/hekkpipe_portfolio.png" alt="Hekkpipe">
                     </a>
                 </figure>
                 <h3 style="text-align: center; margin-top: 20px;">Hekkpipe</h3>
@@ -108,7 +109,7 @@
             <li style="padding: 5px;">
                 <figure class="meal-photo">
                     <a href="http://www.stonefashion.at/" target="_blank">
-                        <img src="resources/img/stonefashion.png" alt="Stonefashion">
+                        <img src="resources/img/stonefashion_portfolio.png" alt="Stonefashion">
                     </a>
                 </figure>
                 <h3 style="text-align: center; margin-top: 20px;">Stonefashion</h3>
@@ -116,7 +117,7 @@
             <li style="padding: 5px;">
                 <figure class="meal-photo">
                     <a href="https://dodax.ch" target="_blank">
-                        <img src="resources/img/dodax-shop.PNG" alt="Dodax Online Platform">
+                        <img src="resources/img/dodaxshop_portfolio.PNG" alt="Dodax Online Platform">
                     </a>
                 </figure>
                 <h3 style="text-align: center; margin-top: 20px;">Dodax Online Platform</h3>
@@ -124,7 +125,7 @@
             <li style="padding: 5px;">
                 <figure class="meal-photo">
                     <a href="https://sellers.dodax.ch" target="_blank">
-                        <img src="resources/img/dodax-marketplace.png" alt="Dodax Seller Platform">
+                        <img src="resources/img/dodaxsellers_portfolio.png" alt="Dodax Seller Platform">
                     </a>
                 </figure>
                 <h3 style="text-align: center; margin-top: 20px;">Dodax Seller Platform</h3>
@@ -178,19 +179,13 @@
             <div class="col span-1-of-2">
                 <ul class="footer-nav">
                     <li>
-                        <a href="#">About us</a>
+                        <a href="#services">What we do</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a class="js--scroll-to-portfolio" href="#">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Press</a>
-                    </li>
-                    <li>
-                        <a href="#">iOS App</a>
-                    </li>
-                    <li>
-                        <a href="#">Android App</a>
+                        <a href="#contact">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -198,15 +193,20 @@
                 <ul class="social-links">
                     <li>
                         <a href="#">
-                            <i class="ion-social-facebook"></i>
+                            <!-- <i class="ion-social-facebook"></i> -->
                         </a>
+                    </li>
+                    <li>
+                        <p>
+                            Solvit Ltd.<br>Tina 4, Tallinn 10126, Estonia
+                        </p>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <p>
-                Copyright &copy; 2015 by Omnifood. All rights reserved.
+                Copyright &copy; 2018 by Devstack. All rights reserved.
             </p>
         </div>
     </footer>

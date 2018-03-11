@@ -219,9 +219,9 @@ header {
 
 .logo {
     width: auto;
-    height: 100px;
+    height: 90px;
     float: left;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 5%;
 }
 
@@ -338,7 +338,7 @@ p {
 }
 
 .meal-photo img {
-    opacity: 0.7;
+    opacity: 0.2;
     width: 100%;
     height: auto;
     -webkit-transform: scale(1.15);
@@ -573,7 +573,7 @@ input[type=checkbox] {
 
 footer {
     background: #333;
-    padding: 50px;
+    padding: 20px;
     font-size: 80%;
 }
 
@@ -646,7 +646,7 @@ footer {
 footer p {
     color: #888;
     text-align: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* -----------------------*/
