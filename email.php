@@ -13,4 +13,5 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // send email
 mail("trifunovic.stefan@yahoo.com","DEVSTACK Request",$msg, $headers);
+header("Location: /index.html");
 ?>
