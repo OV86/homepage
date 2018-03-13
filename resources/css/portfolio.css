@@ -13,18 +13,3 @@ div.pf_container_center {
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-
-
-
-@media only screen and (max-width: 767px) {
-    li.pf_container {
-        padding: 20px;
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    li.pf_container {
-        padding: 5px;
-    }
-}

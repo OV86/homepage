@@ -44,6 +44,19 @@
 
 /* small phones to tablets: from 481 to 767px */
 @media only screen and (max-width: 767px) {
+    .footer-nav {
+        text-align: center;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    li.pf_container {
+        padding: 20px;
+        width: 100%;
+    }
+
     body { font-size: 16px; }
     section { padding: 30px 0; }
     
@@ -101,6 +114,7 @@
     .app-screen { width: 40%; }
     
     header { background-attachment: scroll; }
+
 }
 
 /* small phones 0 to 480px */
@@ -109,6 +123,20 @@
     .contact-form { width: 100%; }
     
     header { background-attachment: scroll; }
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-nav {
+        float: left;
+    }
+
+    .social-links {
+        float: right;
+    }
+
+    li.pf_container {
+        padding: 5px;
+    }
 }
 
 
