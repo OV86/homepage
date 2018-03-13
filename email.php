@@ -1,8 +1,8 @@
 <?php
 // the message
-$msg = "From: " + $_POST["name"] + "\n" + 
-       "Email: " + $_POST["email"] + "\n" + 
-       "Message: " + $_POST["message"];
+$msg = "From: " . $_POST["name"] . "\n" . 
+       "Email: " . $_POST["email"] . "\n" . 
+       "Message: " . $_POST["message"];
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
