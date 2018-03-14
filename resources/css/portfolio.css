@@ -1,0 +1,15 @@
+div.pf_container {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 110%;
+}
+
+div.pf_container_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
