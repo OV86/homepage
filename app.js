@@ -7,8 +7,17 @@ app.use(express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('port', (process.env.PORT || 5000));
+
 app.get("/", function(req, res) {
-    res.sendFile('index.html');
+    res.redirect('/ee');
+});
+
+app.get("/ee", function(req, res) {
+    res.sendFile('est.html', {"root": __dirname});
+});
+
+app.get("/en", function(req, res) {
+    res.sendFile('eng.html', {"root": __dirname});
 });
 
 app.post('/formProcess', function (req, res) {
