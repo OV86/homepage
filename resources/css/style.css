@@ -245,6 +245,15 @@ header {
     margin-left: 40px;
 }
 
+.main-nav li:nth-child(3) {
+    font-size: 70%;
+}
+
+.main-nav li:nth-child(4) {
+    font-size: 70%;
+    margin-left: 10px;
+}
+
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
@@ -262,9 +271,9 @@ header {
     border-bottom: 2px solid var(--main-color);
 }
 
-p {
+/* p {
     text-align: justify;
-}
+} */
 
 /* mobile navi */
 .mobile-nav-icon {

@@ -48,6 +48,10 @@
         text-align: center;
     }
 
+    .main-nav li:nth-child(4) {
+        margin-left: 40px;
+    }
+
     .social-links {
         text-align: center;
     }
@@ -121,6 +125,10 @@
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0; }
     .contact-form { width: 100%; }
+    
+    .main-nav li:nth-child(4) {
+        margin-left: 40px;
+    }
     
     header { background-attachment: scroll; }
 }
