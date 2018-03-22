@@ -6,6 +6,7 @@ var nodemailer = require("nodemailer");
 app.use(express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.set('port', (process.env.PORT || 5000));
 app.get("/", function(req, res) {
     res.sendFile('index.html');
 });
@@ -44,6 +45,6 @@ app.post('/formProcess', function (req, res) {
     });
 });
 
-app.listen(8080, '127.0.0.1', function() {
-    console.log("Server Started.");
+app.listen(app.get('port'), function() {
+    console.log("Server started.");
 });
