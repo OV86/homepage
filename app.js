@@ -17,10 +17,12 @@ app.post('/formProcess', function (req, res) {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport(
         {
-            service: 'Gmail',
+            host: 'smtp.zone.ee',
+            port: 587,
+            secure: false,
             auth: {
-                user: "olaf.hekk@gmail.com", // generated ethereal user
-                pass: "l0detfsa" // generated ethereal password
+                user: "olaf@devstack.ee", // generated ethereal user
+                pass: "oldevstack123" // generated ethereal password
             }
     });
 
