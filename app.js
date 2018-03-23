@@ -35,7 +35,7 @@ app.post('/formProcess', function (req, res) {
     let mailData = req.body;
     console.log(mailData);
     let mailOptions = {
-        from: mailData.email, // sender address
+        from: "olaf@devstack.ee", // sender address
         to: 'olaf.vaher@gmail.com, trifunovic.stefan@yahoo.com', // list of receivers separated by comma
         subject: 'Form submission from Devstack: ' + mailData.email, // Subject line
         text: mailData.message, // plain text body
