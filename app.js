@@ -9,10 +9,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('port', (process.env.PORT || 5000));
 
 app.get("/", function(req, res) {
-    res.redirect('/ee');
-});
-
-app.get("/ee", function(req, res) {
     res.sendFile('est.html', {"root": __dirname});
 });
 
