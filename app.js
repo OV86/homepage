@@ -1,17 +1,22 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var nodemailer = require("nodemailer");
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
+
+let env = process.env.NODE_ENV || 'development';
 
 // set up SSL redirect
-var forceSsl = function (req, res, next) {
+const forceSsl = function (req, res, next) {
     if (req.headers['x-forwarded-proto'] !== 'https') {
         return res.redirect(['https://', req.get('Host'), req.url].join(''));
     }
     return next();
 };
 
-app.use(forceSsl);
+if (env !== 'development') {
+    app.use(forceSsl);
+}
+
 app.use(express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({extended: true}));
 
