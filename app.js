@@ -36,12 +36,12 @@ app.post('/formProcess', function (req, res) {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport(
         {
-            host: 'smtp.zone.ee',
+            host: 'smtp.zoho.com',
             port: 587,
             secure: false,
             auth: {
-                user: "olaf@devstack.ee", // generated ethereal user
-                pass: "oldevstack123" // generated ethereal password
+                user: "info@devstack.ee",
+                pass: "SloiwramthISwo8"
             }
     });
 
@@ -49,17 +49,19 @@ app.post('/formProcess', function (req, res) {
     let mailData = req.body;
     console.log(mailData);
     let mailOptions = {
-        from: "olaf@devstack.ee", // sender address
+        from: "info@devstack.ee", // sender address
         to: 'olaf.vaher@gmail.com, trifunovic.stefan@yahoo.com', // list of receivers separated by comma
-        subject: 'Form submission from Devstack: ' + mailData.email, // Subject line
+        subject: 'Devstack form submission: ' + mailData.email, // Subject line
         text: mailData.message, // plain text body
-        html: '<p>From: ' + mailData.name + '</p><p>Email: ' + mailData.email + '</p><p>' + mailData.message + '</p>'
+        html: '<p>Name: ' + mailData.name + '</p><p>Email: ' + mailData.email + '</p><p>' + mailData.message + '</p>'
     };
 
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            console.log(error);
+            res.redirect('/');
+            return;
         }
         console.log('Message sent: %s', info.messageId);
         res.redirect('/');
