@@ -13,15 +13,19 @@ const forceSsl = function (req, res, next) {
     return next();
 };
 
+// no ssl for local env
 if (env !== 'development') {
     app.use(forceSsl);
 }
 
+// set up body parser and a css files
 app.use(express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({extended: true}));
 
+// run either in production or dev
 app.set('port', (process.env.PORT || 5000));
 
+// basic routes
 app.get("/", function(req, res) {
     res.sendFile('est.html', {"root": __dirname});
 });
@@ -30,6 +34,7 @@ app.get("/en", function(req, res) {
     res.sendFile('eng.html', {"root": __dirname});
 });
 
+// process the form
 app.post('/formProcess', function (req, res) {
     const nodemailer = require('nodemailer');
 
