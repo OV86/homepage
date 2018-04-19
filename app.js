@@ -5,18 +5,20 @@ const nodemailer = require("nodemailer");
 
 let env = process.env.NODE_ENV || 'development';
 
-// set up SSL redirect
-const forceSsl = function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-        return res.redirect(['https://', req.get('Host'), req.url].join(''));
-    }
-    return next();
-};
+// disable ssl redirect
 
-// no ssl for local env
-if (env !== 'development') {
-    app.use(forceSsl);
-}
+// set up SSL redirect
+// const forceSsl = function (req, res, next) {
+//     if (req.headers['x-forwarded-proto'] !== 'https') {
+//         return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//     }
+//     return next();
+// };
+
+// // no ssl for local env
+// if (env !== 'development') {
+//     app.use(forceSsl);
+// }
 
 // set up body parser and a css files
 app.use(express.static(__dirname + '/'));
